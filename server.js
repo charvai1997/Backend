@@ -34,8 +34,8 @@ mongoose.connection.on("error", (err) => {
 
 var httpServer = http.createServer(app);
 
-httpServer.listen(process.env.PORT, () => {
-	console.log(`Server is running on port ${process.env.PORT}`);
+httpServer.listen(process.env.PORT || 5005, () => {
+	console.log(`Server is running on port ${process.env.PORT || 5005}`);
 });
 
 app.get("/", (req, res) => {
